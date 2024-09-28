@@ -9,7 +9,7 @@ public class ObstaclesSpawner : MonoBehaviour
     public GameObject obstacles;
 
     public float direction;
-    // Update is called once per frame
+
     void Update()
     {
         if(time > waitTime){
@@ -18,7 +18,7 @@ public class ObstaclesSpawner : MonoBehaviour
             Random.Range(-direction, direction), 0f);
             time = 0f;
 
-            Destroy(go, 5);//destroys after 5 seconds
+            Destroy(go, 3);
         }
         time += Time.deltaTime;
     }
