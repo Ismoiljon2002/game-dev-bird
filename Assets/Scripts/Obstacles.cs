@@ -6,11 +6,9 @@ public class Obstacles : MonoBehaviour
 
     private void FixedUpdate()
     {
-        // Move the obstacle to the left
         transform.position += ((Vector3.left * speed) * Time.deltaTime);
     }
 
-    // Detect when the player passes through the obstacle
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
@@ -18,7 +16,7 @@ public class Obstacles : MonoBehaviour
             Player player = other.GetComponent<Player>();
             if (player != null)
             {
-                player.CrossObstacle(); // Notify the player that an obstacle has been crossed
+                player.CrossObstacle(); 
             }
         }
     }

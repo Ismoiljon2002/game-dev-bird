@@ -9,7 +9,6 @@ public class ObstaclesSpawner : MonoBehaviour
     public GameObject obstacles;
 
     public float direction;
-
     void Update()
     {
         if(time > waitTime){
@@ -18,7 +17,7 @@ public class ObstaclesSpawner : MonoBehaviour
             Random.Range(-direction, direction), 0f);
             time = 0f;
 
-            Destroy(go, 3);
+            Destroy(go, 2);
         }
         time += Time.deltaTime;
     }

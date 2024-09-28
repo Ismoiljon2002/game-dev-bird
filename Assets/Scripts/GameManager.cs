@@ -1,5 +1,5 @@
 using UnityEngine;
-using UnityEngine.SceneManagement; // Use SceneManager instead of EditorSceneManager
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
@@ -10,14 +10,13 @@ public class GameManager : MonoBehaviour
     public Text gameOverTxt;
     public float timerBack = 3;
 
-    public AudioClip gameOverSound; // Reference for the game over sound
-    private AudioSource audioSource; // Reference to AudioSource
+    public AudioClip gameOverSound;
+    private AudioSource audioSource;
 
-    private bool isGameOverSoundPlayed = false; // Flag to ensure the sound plays only once
+    private bool isGameOverSoundPlayed = false;
 
     private void Start()
     {
-        // Initialize the AudioSource
         audioSource = gameObject.AddComponent<AudioSource>();
 
         gameOverTxt.gameObject.SetActive(false);
@@ -31,7 +30,7 @@ public class GameManager : MonoBehaviour
             if (gameOverSound != null && !isGameOverSoundPlayed)
             {
                 audioSource.PlayOneShot(gameOverSound);
-                isGameOverSoundPlayed = true; // Ensure the sound only plays once
+                isGameOverSoundPlayed = true; 
             }
 
             gameOverTxt.gameObject.SetActive(true);
@@ -58,6 +57,6 @@ public class GameManager : MonoBehaviour
 
     public void RestartGame()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); // Reload the current scene
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); 
     }
 }
