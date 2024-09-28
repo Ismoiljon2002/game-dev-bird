@@ -3,7 +3,12 @@ guid: 122d745ccd9f64fa38bef123b4aae293
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - startBtn: {instanceID: 0}
+  - gameOverAudio: {instanceID: 0}
+  - birdBek: {instanceID: 0}
+  - gameOverTxt: {instanceID: 0}
+  - gameOverSound: {fileID: 8300000, guid: 06bd221557ef5d54f874c9943574f87a, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
